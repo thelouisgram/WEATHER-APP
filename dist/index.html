@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/86cf6c5294.js" crossorigin="anonymous"></script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+</style>
+    <link rel="stylesheet" href="style.css">
+    <title>Weather App</title>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <img src="https://img.icons8.com/3d-fluency/100/null/storm.png" class="con"/>
+            <h1>Weather App</h1>
+        </div>
+    </header>
+    <section class="container">
+        <div class="card loading">
+            <div class="search-box">
+        <i class="fa-solid fa-location-dot"></i>
+        <input type="text" class="search-bar" id="input" placeholder="Enter Location...">
+        <button class="btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="weather loading">
+            <h2 class="city">--</h2>
+            <div class="temp">--</div>
+            <img class="icon" src="https://img.icons8.com/fluency/100/null/sad-cloud.png"/>
+            <h3 class="status">--</h3>
+            <div class="description">
+                <div class="humid">
+                    <div>
+                    <h3>Humidity</h3>
+                    </div>
+                    <h2 class="humidity">--</h2>
+                </div>
+                <div class="wind-speed">
+                    <div>
+                    <h3>Wind Speed</h3>
+                    </div>
+                    <h2 class="wind">--</h2>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <footer><a href="https://github.com/thelouisgram"><i class="fa-brands fa-github"></i></a></footer>
+
+    <script type='module' defer src='bundle.js'></script>
+</body>
+</html>
