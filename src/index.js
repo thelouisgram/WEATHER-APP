@@ -5,7 +5,8 @@ const weather = {
 			.then((response) => response.json())
 			.then((data) => this.displayWeather(data))
 			.catch((error) => {
-				document.querySelector('.city').innerText = 'City Not found';
+				document.querySelector('.city').innerText = 'Error 404: Location Not found';
+				document.querySelector('.city').style.fontSize = '1.3rem'
 				document.querySelector('.temp').innerText = '--';
 				document.querySelector('.status').innerText = '--';
 				document.querySelector('.humidity').innerText = '--';
@@ -22,8 +23,6 @@ const weather = {
 		const { icon, description } = data.weather[0];
 		const { temp, humidity } = data.main;
 		const { speed } = data.wind;
-		const { cod } = data;
-
 		const img = document.querySelector('.icon');
 
 		document.querySelector('.city').innerText = 'Weather in ' + name;
@@ -31,6 +30,7 @@ const weather = {
 		document.querySelector('.status').innerText = description;
 		document.querySelector('.humidity').innerText = humidity + '%';
 		document.querySelector('.wind').innerText = speed + 'km/h';
+		weather.clear();
 
 		if (icon === '01d') {
 			img.src = 'https://img.icons8.com/fluency/100/null/sun.png';
@@ -60,11 +60,15 @@ const weather = {
 	},
 	search: function() {
 		this.fetchWeather(document.querySelector('#input').value);
+	}, 
+	clear: function() {
+		document.querySelector('#input').value = '';
 	}
 };
 
 document.querySelector('.btn').addEventListener('click', function() {
 	weather.search();
+	
 });
 
 document.querySelector('#input').addEventListener('keyup', function(event) {
