@@ -23,7 +23,7 @@ body {
 	justify-content: space-between;
 	align-items: center;
 	background-color: var(--primary-bg);
-	background: url(bg.jpg) no-repeat center center/cover;
+	background:linear-gradient(#22222299, #0f0f0f99), url(bg.jpg) no-repeat center center/cover;
 	color: var(--primary-color);
 }
 
