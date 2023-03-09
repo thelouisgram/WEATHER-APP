@@ -23,6 +23,7 @@ body {
 	justify-content: space-between;
 	align-items: center;
 	background-color: var(--primary-bg);
+	background:linear-gradient(#31313199, #1f1e1e99), url(bg.jpg) no-repeat center center/cover;
 	color: var(--primary-color);
 }
 
@@ -40,7 +41,6 @@ body {
 	background-color: var(--primary-color);
 	border-radius: 10px;
 	padding: 10px;
-	margin-top: 10px;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -49,7 +49,14 @@ body {
     margin:20px;
 }
 
-footer {
+.container{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer {
 	width: 350px;
 	color: var(--primary-bg);
 	background-color: var(--primary-color);
@@ -60,25 +67,59 @@ footer {
 	margin-bottom: 10px;
 }
 
-footer a{
+.footer a{
     color: var(--primary-bg);
 }
 
 .card {
 	width: 350px;
-	height: 410px;
+	height: 430px;
 	background-color: var(--secondary-bg);
 	color: var(--secondary-color);
-	padding: 20px 30px;
+	padding: 5px 5px;
 	border-radius: 10px;
 	transition: .6s ease-out;
 	overflow: hidden;
     margin:20px;
-
+	z-index: 1;
 }
 
+
+.tools {
+ display: flex;
+ align-items: center;
+ padding: 9px;
+ margin-bottom: 10px;
+}
+
+.circle {
+ padding: 0 4px;
+}
+
+.box {
+ display: inline-block;
+ align-items: center;
+ width: 15px;
+ height: 15px;
+ padding: 1px;
+ border-radius: 50%;
+}
+
+.red {
+ background-color: #ff605c;
+}
+
+.yellow {
+ background-color: #ffbd44;
+}
+
+.green {
+ background-color: #00ca4e;
+}
+
+
 .card.loading {
-	height: 75px;
+	height: 111px;
 }
 
 .search-box {
@@ -87,6 +128,7 @@ footer a{
 	justify-content: space-between;
 	align-items: center;
 	gap: 10px;
+	padding: 0px 30px;
 }
 
 input {
@@ -96,6 +138,7 @@ input {
 	padding: 5px 15px;
 	border-radius: 10px;
 	text-transform: capitalize;
+	background-color: #f0f4f8;
 }
 
 .search-box i {
@@ -138,14 +181,13 @@ input {
 }
 
 .temp {
-	font-size: 2.5rem;
-	margin-top: 0px;
+	font-size: 2.3rem;
 	font-weight: 400;
 }
 
 .status {
-	margin: 0px 0px 15px 0;
-	font-size: 2rem;
+	margin: 0px 0px 10px 0;
+	font-size: 1.7rem;
 	font-weight: 400;
 	text-transform: capitalize;
 }
@@ -160,8 +202,6 @@ input {
 
 .humid div,
 .wind-speed div {
-	display: flex;
-	gap: 10px;
 	align-items: center;
 	text-align: center;
 	margin-bottom: 5px;
@@ -195,7 +235,7 @@ input {
 
 
 @media(max-width:400px){
-    .header, .card, footer{
+    .header, .card, .footer{
         width:325px;
     }
 }
