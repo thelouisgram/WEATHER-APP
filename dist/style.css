@@ -82,7 +82,7 @@ body {
 	border-radius: 10px;
 	transition: .6s ease-out;
 	overflow: hidden;
-    margin:20px;
+    margin-bottom:10px;
 	z-index: 1;
 }
 
@@ -256,3 +256,18 @@ input {
 	height: 35px;
 	margin: 5px;
 }
+
+.blink {
+        animation: blink-animation 1s steps(5, start) infinite;
+        -webkit-animation: blink-animation 1s steps(5, start) infinite;
+      }
+      @keyframes blink-animation {
+        to {
+          visibility: hidden;
+        }
+      }
+      @-webkit-keyframes blink-animation {
+        to {
+          visibility: hidden;
+        }
+      }
