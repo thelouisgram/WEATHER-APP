@@ -1,3 +1,9 @@
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelector('.container').classList.add('move-up')
+
+});
+
+
 const weather = {
 	apiKey: 'e338f4f4424d82ce7e60c9d26f59eb76',
 	fetchWeather: function(city) {
