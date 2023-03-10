@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+  document.documentElement.classList.add('loaded');
   document.querySelector('.container').classList.add('move-up')
 
 });
