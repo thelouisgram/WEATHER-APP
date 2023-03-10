@@ -5,8 +5,8 @@ const weather = {
 			.then((response) => response.json())
 			.then((data) => this.displayWeather(data))
 			.catch((error) => {
-				document.querySelector('.city').innerText = 'Error 404: Location Not found';
-				document.querySelector('.city').style.fontSize = '1.3rem'
+				document.querySelector('.city').innerText = 'Location Not found';
+				document.querySelector('.city').style.fontSize = '1.2rem'
 				document.querySelector('.temp').innerText = '--';
 				document.querySelector('.status').innerText = '--';
 				document.querySelector('.humidity').innerText = '--';
@@ -16,6 +16,8 @@ const weather = {
 				document.querySelector('.weather').classList.add('fadeIn');
 				document.querySelector('.card').classList.remove('loading');
 				img.src = 'https://img.icons8.com/fluency/100/null/sad-cloud.png';
+				document.querySelector('.tools').classList.remove('blink');
+
 			});
 	},
 	displayWeather: function(data) {
@@ -57,13 +59,18 @@ const weather = {
 		document.querySelector('.weather').classList.remove('loading');
 		document.querySelector('.weather').classList.add('fadeIn');
 		document.querySelector('.card').classList.remove('loading');
+		document.querySelector('.tools').classList.remove('blink');
 	},
 	search: function() {
 		this.fetchWeather(document.querySelector('#input').value);
+		weather.blink()
 	}, 
 	clear: function() {
 		document.querySelector('#input').value = '';
-	}
+	},
+	blink:function(){
+		document.querySelector('.tools').classList.add('blink')
+	},
 };
 
 document.querySelector('.btn').addEventListener('click', function() {
