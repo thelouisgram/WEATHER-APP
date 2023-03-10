@@ -17,11 +17,12 @@
 }
 
 :root {
-  opacity: 0; /* Set the initial opacity to 0 */
-  transition: opacity 1s ease-in-out; /* Add a transition effect to the opacity property */
+  background-color: #222;
+  transition: background-color 1s ease-in-out; /* Add a transition effect to the opacity property */
 }
 
 :root.loaded {
+	background-color: transparent;
   opacity: 1; /* When the page is loaded, set the opacity to 1 */
 }
 
@@ -52,8 +53,7 @@ body {
 	justify-content: space-between;
 	align-items: center;
 	background-color: var(--primary-bg);
-	background:linear-gradient(#22222299, #0f0f0f99), url(bg.jpg) no-repeat center center/cover;
-	background:linear-gradient(#22222299, #0f0f0f99), url(bg.webp) no-repeat center center/cover;
+	background:url(bg.webp) no-repeat center center/cover;
 	color: var(--primary-color);
 }
 
@@ -109,7 +109,7 @@ body {
 	color: var(--secondary-color);
 	padding: 5px 5px;
 	border-radius: 10px;
-	transition: .6s ease-out;
+	transition: .4s ease-out;
 	overflow: hidden;
     margin-bottom:10px;
 	z-index: 1;
@@ -256,8 +256,8 @@ input {
 }
 
 .fadeIn {
-	animation: 0.5s fadeIn forwards;
-	animation-delay: 0.5s;
+	animation: 0.4s fadeIn forwards;
+	animation-delay: 0.4s;
 }
 
 @keyframes fadeIn {
