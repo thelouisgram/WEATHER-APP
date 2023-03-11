@@ -23,7 +23,7 @@ const weather = {
 				document.querySelector('.weather').classList.add('fadeIn');
 				document.querySelector('.card').classList.remove('loading');
 				img.src = 'https://img.icons8.com/fluency/100/null/sad-cloud.png';
-				document.querySelector('.tools').classList.remove('blink');
+				document.querySelector('.spinner').classList.remove('loading');
 
 			});
 	},
@@ -66,7 +66,7 @@ const weather = {
 		document.querySelector('.weather').classList.remove('loading');
 		document.querySelector('.weather').classList.add('fadeIn');
 		document.querySelector('.card').classList.remove('loading');
-		document.querySelector('.tools').classList.remove('blink');
+		document.querySelector('.spinner').classList.remove('loading');
 	},
 	search: function() {
 		this.fetchWeather(document.querySelector('#input').value);
@@ -76,7 +76,7 @@ const weather = {
 		document.querySelector('#input').value = '';
 	},
 	blink:function(){
-		document.querySelector('.tools').classList.add('blink')
+		document.querySelector('.spinner').classList.add('loading')
 	},
 };
 
